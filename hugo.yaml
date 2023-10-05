@@ -62,12 +62,12 @@ params:
     imageUrl: headshot.webp
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: Nathan Wright Head Shot
     buttons:
+      - name: Resume
+        url: resume
       - name: Posts
         url: posts
-      - name: Tags
-        url: tags
 
   # home-info mode
   homeInfoParams:
@@ -98,7 +98,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/NateWright/NateWright/blob/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -114,9 +114,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: about
-      name: about
-      url: /about/
+    - identifier: resume
+      name: resume
+      url: /resume/
       weight: 10
     - identifier: posts
       name: posts
