@@ -1,18 +1,8 @@
-{ stdenv, fetchFromGitHub, hugo }:
-stdenv.mkDerivation {
-  name = "nwright-tech-hugo-site";
-  src = ./.;
-
-  nativeBuildInputs = [ hugo ];
-  buildPhase = ''
-    cp -r $src/* .
-    ${hugo}/bin/hugo
-  '';
-
-  installPhase = ''
-    runHook preInstall
-    mkdir -p $out
-    cp -r public/* $out/
-    runHook postInstall
-  '';
+with import <nixpkgs> { };
+stdenv.mkDerivation rec {
+  name = "hugo";
+  env = buildEnv { name = name; paths = buildInputs; };
+  buildInputs = [
+    hugo
+  ];
 }
