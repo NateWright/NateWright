@@ -1,19 +1,35 @@
+# {
+#   description = "A basic flake";
+
+#   inputs.systems.url = "github:nix-systems/default";
+
+#   outputs = { self, systems, nixpkgs }:
+#     let
+#       eachSystem = nixpkgs.lib.genAttrs (import systems);
+#     in
+#     {
+#       # packages = eachSystem (system: {
+#       #   natewright-hugo-site = pkgs.callPackage ./default.nix { };
+#       # });
+#       devShell = eachSystem (system: {
+#         natewright-hugo-site = nixpkgs.callPackage ./devShell.nix { };
+#       });
+
+#     };
+# }
+
 {
-  description = "A basic flake";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
 
-  inputs.systems.url = "github:nix-systems/default";
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        packages.hello = pkgs.callPackage ./default.nix { };
 
-  outputs = { self, systems, nixpkgs }:
-    let
-      eachSystem = nixpkgs.lib.genAttrs (import systems);
-    in
-    {
-      # packages = eachSystem (system: {
-      #   natewright-hugo-site = pkgs.callPackage ./default.nix { };
-      # });
-      devShells = eachSystem (system: {
-        natewright-hugo-site = pkgs.callPackage ./devShell.nix { };
+        devShell = pkgs.mkShell { buildInputs = [ pkgs.hugo ]; };
       });
-
-    };
 }
