@@ -28,7 +28,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
-        packages.hello = pkgs.callPackage ./default.nix { };
+        packages.default = pkgs.callPackage ./default.nix { };
 
         devShell = pkgs.mkShell { buildInputs = [ pkgs.hugo ]; };
       });

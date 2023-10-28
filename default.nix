@@ -1,8 +1,12 @@
-{ stdenv, fetchFromGitHub, hugo }:
+{ stdenv, fetchgit, hugo }:
 stdenv.mkDerivation {
   name = "nwright-tech-hugo-site";
 
-  src = self;
+  # src = ./.;
+  src = fetchgit {
+    url = "https://github.com/natewright/natewright.git";
+    inherit (flake_input) rev;
+  };
 
   nativeBuildInputs = [ hugo ];
   buildPhase = ''
