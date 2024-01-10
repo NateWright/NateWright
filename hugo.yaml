@@ -118,6 +118,10 @@ menu:
       name: resume
       url: /resume/
       weight: 10
+    - identifier: projects
+      name: projects
+      url: /projects/
+      weight: 15
     - identifier: posts
       name: posts
       url: /posts/
