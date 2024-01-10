@@ -1,5 +1,5 @@
 {
-  description = "my project description";
+  description = "nwright.tech hugo website";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
