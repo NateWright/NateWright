@@ -11,6 +11,6 @@ In this class, we were assigned a project in which to demonstrate various parts 
 * Leadership skills
 * Coordination and Goal setting
 * Software Lifecycle
-* Various diagrams and Software Requirements Specification
+* UML diagrams and Software Requirements Specification
 * Increased knowledge of GitHub Actions
 * Godot
