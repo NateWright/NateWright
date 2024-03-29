@@ -4,6 +4,8 @@
 # Create new post
 hugo new --kind post path/to/post.md
 ```
+
+### Before push run
 ```bash
-git rev-parse HEAD
+./create_hugo.sh
 ```
