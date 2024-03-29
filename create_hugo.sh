@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 rm -r build
 mkdir -p build
 REV=`git rev-parse HEAD`
@@ -58,5 +58,4 @@ stdenv.mkDerivation {
     cp -r public/* \$out/
     runHook postInstall
   '';
-}
-" > default.nix
+}" > ../derivation.nix
