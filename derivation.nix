@@ -5,8 +5,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "NateWright";
     repo = "NateWright";
-    rev = "d21273d5ad6d511b26ddfc090a83db3db41980c1";
-    sha256 = "sha256-9LDJ1mf4Y818E5hXW8RrRY5XLfCaIKJmoJMmIL8YasA=";
+    rev = "85f2cae0dbbd7bfe257173f0982931e5fadb95ea";
+    sha256 = "sha256-utqLT9z8ErPXnpKOFS7GSKx3TSqIJ++Hj1+xdkHm+v8=";
     fetchSubmodules = true;
   };
 
