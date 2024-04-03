@@ -117,7 +117,7 @@ menu:
     - identifier: resume
       name: resume
       url: https://github.com/NateWright/resume/blob/main/NathanWrightResume.pdf?raw=true
-      weight: 10
+      weight: 21
     - identifier: projects
       name: projects
       url: /projects/
