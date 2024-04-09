@@ -65,9 +65,11 @@ params:
     imageTitle: Nathan Wright Head Shot
     buttons:
       - name: Resume
-        url: resume
+        url: https://github.com/NateWright/resume/blob/main/NathanWrightResume.pdf?raw=true
       - name: Posts
         url: posts
+      - name: Contact
+        url: contact
 
   # home-info mode
   homeInfoParams:
@@ -117,7 +119,7 @@ menu:
     - identifier: resume
       name: resume
       url: https://github.com/NateWright/resume/blob/main/NathanWrightResume.pdf?raw=true
-      weight: 21
+      weight: 25
     - identifier: projects
       name: projects
       url: /projects/
@@ -126,6 +128,10 @@ menu:
       name: posts
       url: /posts/
       weight: 20
+    - identifier: contact
+      name: contact
+      url: /contact/
+      weight: 22
     - identifier: website
       name: nwright.tech
       url: https://nwright.tech
