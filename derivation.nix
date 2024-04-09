@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, hugo, paper-mod }:
+{ stdenv, hugo, paper-mod }:
 stdenv.mkDerivation {
   name = "nwright-tech-hugo-site";
 
