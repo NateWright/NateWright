@@ -67,7 +67,7 @@ params:
       - name: Resume
         url: https://github.com/NateWright/resume/blob/main/NathanWrightResume.pdf?raw=true
       - name: Posts
-        url: posts
+        url: /posts/
       - name: Contact
         url: /contact/
 
