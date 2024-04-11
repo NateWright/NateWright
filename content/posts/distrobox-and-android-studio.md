@@ -16,7 +16,7 @@ distrobox enter <container-name>
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-sudo apt install libncurses5 libpulse0 libxtst6
+sudo apt install libncurses5 libpulse0 libxtst6 git libglib2.0-bin build-essential libxft2 qemu qemu-kvm libnotify4 libglu1 xvfb
 ```
 3. (Host Machine) Download Android Studio from the official website [here](https://developer.android.com/studio)
 4. (Host Machine) Move the downloaded tar.zx file to home of container e.g.
